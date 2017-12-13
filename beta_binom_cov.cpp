@@ -81,7 +81,6 @@ arma::vec truncate(arma::vec x, double a)
   return x;
 }
 
-// [[Rcpp::export]]
 
 arma::mat NewtonRaphson(arma::vec data_0, arma::vec data_1, arma::mat X, double nu, double sigma)
 {
