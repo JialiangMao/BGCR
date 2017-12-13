@@ -103,7 +103,7 @@ AG_simulate_senario_1 = function(seed, inc = c(1, 1.5, 2.5), save = TRUE){
       beta_alt[k] = res$beta
  
       group.data = list(x1 = t(otu_group_1), x2 = t(otu_group_2))
-      nt = nodetest(pstrct, group.data) #Generate triplet statistics
+      nt = nodetest(pstrct, group.data) 
       sim_w_alt[k] = nt$w
       sim_w_alt_ind[k] = min(nt$MoMp)
       sim_dir_alt[k] = Xmcupo.sevsample(group.data)$`p value`
@@ -131,4 +131,3 @@ AG_simulate_senario_1 = function(seed, inc = c(1, 1.5, 2.5), save = TRUE){
 
 seed = as.numeric(Sys.getenv('SLURM_ARRAY_TASK_ID'))
 AG_simulate_senario_1(seed, inc = c(1, 1.5, 2.5), save = TRUE)
-
