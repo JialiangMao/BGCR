@@ -10,7 +10,6 @@ using namespace Rcpp;
 using namespace arma;
 using namespace std;
 
-
 double log_exp_x_plus_exp_y(double x, double y) 
 {
   double result;
